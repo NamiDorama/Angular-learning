@@ -1,0 +1,36 @@
+<label for="un">Enter your name</label>
+<input
+  type="text"
+  class="form-control"
+  name="un"
+  [(ngModel)]="userName">
+
+<p>{{ userName }}</p>
+
+<button
+  class="btn btn-warning"
+  [disabled]="userName === ''"
+  (click)="userName = ''">
+    Reset
+</button>
+<br/>
+
+<button
+  class="btn btn-info"
+  (click)="showDetails()">
+    Display Details
+</button>
+
+<p
+  *ngIf="show"
+  class="details-p">
+    Secret password is Lucky Horse
+</p>
+
+
+<div
+  *ngFor="let item of clicks"
+  [ngClass]="{more: item >= 5}"
+  [ngStyle]="{backgroundColor: item >= 5 ? 'blue' : 'white'}">
+    {{item}}
+</div>

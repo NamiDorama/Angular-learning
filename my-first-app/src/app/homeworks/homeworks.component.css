@@ -1,0 +1,13 @@
+.btn-info {
+    margin: 10px 0;
+    color: currentColor;
+}
+
+.details-p {
+    display: inline-block;
+    margin: 10px;
+}
+
+.more {
+    color: white;
+}
